@@ -17,9 +17,15 @@
 <div id="wrap">
 	
 	<div id="top">
-
+		
 <h1 id="logo">Haedron</h1>
 <hr />
+<div id="user_nav">
+	<% if user_signed_in? %>
+		<p><%= current_user.email %> (<%= link_to "sair", destroy_user_session_path %>)</p>
+	<% end %>
+</div>
+<br class="clear_both" />
 
 <div id="menu">
 	<ul>

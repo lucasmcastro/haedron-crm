@@ -1,6 +1,10 @@
-ul, li, p {
+ul, li, p, img, h1 {
 	margin:0px;
 	padding:0px;
+}
+
+div#user_nav {
+	float:right;
 }
 
 
@@ -23,6 +27,7 @@ h1#logo {
 	background-image: url("/images/logotipo_web.jpg");
 	width:222px;
 	height:46px;
+	float:left;
 }
 
 div#top {
@@ -33,11 +38,11 @@ div#top {
 }
 
 div#menu {
-	border-top: 3px solid #d2d2d2;	
+	margin-top: 5px;
+	border-top: 3px solid #d2d2d2;
 	padding-top: 5px;
 	height: 20px;
 	color: #848484;
-	clear:both;
 }
 
 div#submenu {
@@ -68,7 +73,7 @@ div#submenu .active{
 
 
 div#content {
-	width: 800px;
+	width: 700px;
 	height: auto;
 	display: block;
 	background-color:#EEEEEE;

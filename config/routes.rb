@@ -1,4 +1,6 @@
 Haedron::Application.routes.draw do
+  devise_for :users
+
   resources :accounts
 
   get "home/index"
