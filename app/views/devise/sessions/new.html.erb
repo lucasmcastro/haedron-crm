@@ -1,17 +1,15 @@
-<h2>Sign in</h2>
 
-<%= form_for(resource_name, resource, :url => session_path(resource_name)) do |f| %>
-  <p><%= f.label :email %></p>
-  <p><%= f.text_field :email %></p>
-
-  <p><%= f.label :password %></p>
-  <p><%= f.password_field :password %></p>
+<%= simple_form_for(resource_name, resource, :url => session_path(resource_name)) do |f| %>
+  <div id="sform">
+  <%= f.input :email, :label => false %>
+  <%= f.input :password, :label => false %>
 
   <% if devise_mapping.rememberable? -%>
-    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+    <%= f.input :remember_me, :label => false, :as => :boolean %>
   <% end -%>
 
-  <p><%= f.submit "Sign in" %></p>
+  <%= f.submit "Entrar" %>
+  </div>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

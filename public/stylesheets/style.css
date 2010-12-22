@@ -1,10 +1,10 @@
-ul, li, p, img, h1, h2 {
-	margin:0px;
-	padding:0px;
+* {
+	margin:0;
+	padding:0;
 }
 
 div#user_nav {
-	float:right;
+	float: right;
 }
 
 
@@ -13,28 +13,29 @@ hr {
 }
 
 body {
-	background-color: #F9F9F9;
-	font-family: 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	text-align:left;
 }
 
 div#wrap {
-	width:800px;
+	width: 800px;
+	background-color: #F9F9F9;
+	font-family: 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
 	
 }
 
 h1#logo {
-	text-indent: -4000px;
-	background-image: url("/images/logotipo_web.jpg");
-	width:222px;
-	height:46px;
-	float:left;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url("/images/logotipo_web.jpg") no-repeat top center;
+	width: 222px;
+	height: 46px;
+	float: left;
 }
 
 div#top {
 	height: 100px;
-//	background-color: blue;
 	padding-bottom: 50px;
-	margin-left: 20px;
+	padding: 20px;
 }
 
 div#menu {
@@ -46,29 +47,29 @@ div#menu {
 }
 
 div#submenu {
-	margin-bottom:30px;
+	margin-bottom: 30px;
 }
 
 div#menu ul li{
 	display: inline;
-	margin-right:10px;
-	margin-bottom:3px;
+	margin-right: 10px;
+	margin-bottom: 3px;
 }
 
 div#submenu ul li{
 	display: inline;
-	margin-right:10px;
-	color:black;
+	margin-right: 10px;
+	color: black;
 }
 
 
 div#menu .active{
 	border-bottom: 2px solid #d2d2d2;	
-	font-weight:bold;
+	font-weight: bold;
 }
 
 div#submenu .active{
-	font-weight:bold;
+	font-weight: bold;
 }
 
 
@@ -76,14 +77,14 @@ div#content {
 	width: 700px;
 	height: auto;
 	display: block;
-	background-color:#EEEEEE;
+	background-color: #EEEEEE;
 	color: #9F9F9F;
 	padding: 20px;
 	margin-left: 20px;
 }
 
 div#content h2 {
-	margin-bottom:30px;
+	margin-bottom: 30px;
 }
 
 p.big_text {
@@ -99,23 +100,23 @@ div.control_box {
 	float:right;
 }
 
-.clear_both {
+.clear {
 	clear:both;
 }
 
 .list_item {
-	width:500px;
-	border-top:2px solid #d2d2d2;
-	margin-bottom:10px;
-	padding-top:10px;
+	width: 500px;
+	border-top: 2px solid #d2d2d2;
+	margin-bottom: 10px;
+	padding-top: 10px;
 }
 
 .item_main {
-	float:left;
+	float: left;
 }
 
 .item_control {
-	float:right;
+	float: right;
 }
 
 .simple_form label {
@@ -129,8 +130,8 @@ div.control_box {
 	margin-bottom: 10px;
 }
 
-.simple_form div.boolean, .simple_form input[type='submit'] {
-	margin-left: 110px;
+.simple_form input[type='submit'] {
+	margin-left: 105px;
 }
 
 .simple_form div.boolean label {
