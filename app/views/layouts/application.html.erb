@@ -25,9 +25,7 @@
 		<p><%= current_user.email %> (<%= link_to "sair", destroy_user_session_path %>)</p>
 	<% end %>
 </div>
-<br class="clear" />
-
-<div id="menu">
+<div class="clear" id="menu">
 	<ul>
 		<li><%= link_to "contas", accounts_path %></li>
 		<li>contratos</li>
@@ -40,8 +38,11 @@
 	
 <div id="content">	
     <%= yield %>		
-	</div>
+</div>
 
+<div id="footer">
+	<a href="http://haedron.com.br">Haedron 2010</a>
+</div>
 
 </div>
 

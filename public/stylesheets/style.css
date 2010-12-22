@@ -13,14 +13,18 @@ hr {
 }
 
 body {
-	text-align:left;
+	text-align:center;
 }
 
 div#wrap {
+	text-align: left;
 	width: 800px;
+	margin: 0 auto;
 	background-color: #F9F9F9;
 	font-family: 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
-	
+	padding: 20px 20px 0 20px;
+	border-left: 2px solid #E9E9E9;
+	border-right: 2px solid #E9E9E9;
 }
 
 h1#logo {
@@ -28,21 +32,16 @@ h1#logo {
 	overflow: hidden;
 	background: url("/images/logotipo_web.jpg") no-repeat top center;
 	width: 222px;
-	height: 46px;
 	float: left;
 }
 
 div#top {
-	height: 100px;
-	padding-bottom: 50px;
-	padding: 20px;
+	padding-bottom: 30px;
 }
 
 div#menu {
-	margin-top: 5px;
 	border-top: 3px solid #d2d2d2;
 	padding-top: 5px;
-	height: 20px;
 	color: #848484;
 }
 
@@ -74,13 +73,11 @@ div#submenu .active{
 
 
 div#content {
-	width: 700px;
-	height: auto;
-	display: block;
+	width: auto;
+	height: 350px;
 	background-color: #EEEEEE;
 	color: #9F9F9F;
 	padding: 20px;
-	margin-left: 20px;
 }
 
 div#content h2 {
@@ -137,4 +134,17 @@ div.control_box {
 .simple_form div.boolean label {
 	float: none;
 	margin: 0;
+}
+
+#footer {
+	text-align: center;
+	color: #9F9F9F;
+	margin: 30px -20px 0 -20px;
+	border-top: 2px solid #E9E9E9;
+	border-bottom: 2px solid #E9E9E9;
+	padding: 5px;
+}
+
+#footer a {
+	font-size: 9px;
 }
