@@ -2,4 +2,12 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  simple_form:
+    placeholders:
+      account:
+        display_name: 'Nome da Conta'
+        legal_name: 'Razão Social'
+        legal_number: 'CNPJ'
+    hints:
+      account:
+        legal_number: 'use somente números'

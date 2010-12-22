@@ -1,4 +1,4 @@
-<%= form_for(@account) do |f| %>
+<%= simple_form_for(@account) do |f| %>
   <% if @account.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
@@ -11,19 +11,10 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :display_name %><br />
-    <%= f.text_field :display_name %>
-  </div>
-  <div class="field">
-    <%= f.label :legal_name %><br />
-    <%= f.text_field :legal_name %>
-  </div>
-  <div class="field">
-    <%= f.label :legal_number %><br />
-    <%= f.text_field :legal_number %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+  <%= f.input :display_name, :label => false %>
+  <%= f.input :legal_name, :label => false %>
+  <%= f.input :legal_number, :label => false %>
+  <%= f.submit "Adicionar" %>
+
 <% end %>

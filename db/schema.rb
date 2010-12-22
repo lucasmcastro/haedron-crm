@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20101222012512) do
   create_table "accounts", :force => true do |t|
     t.string   "display_name"
     t.string   "legal_name"
-    t.integer  "legal_number"
+    t.string   "legal_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -3,7 +3,7 @@ class CreateAccounts < ActiveRecord::Migration
     create_table :accounts do |t|
       t.string :display_name
       t.string :legal_name
-      t.integer :legal_number
+      t.string :legal_number
 
       t.timestamps
     end
