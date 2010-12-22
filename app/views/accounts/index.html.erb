@@ -1,0 +1,24 @@
+<div id="submenu">
+	<ul>
+		<li><%= link_to '(+) Adicionar Conta', new_account_path %></li>
+	</ul>
+</div>
+
+<% @accounts.each do |account| %>
+<div class="list_item">
+	<div class="item_main">
+	<p><strong><%= link_to account.display_name, account %></strong></p>
+    <p><%= account.legal_number %></p>
+	<p>Lucas Castro</p>
+    </div>
+
+	<div class="item_control">
+    <p><%= link_to 'Alterar', edit_account_path(account) %></p>
+    <p><%= link_to 'Remover', account, :confirm => 'Are you sure?', :method => :delete %></p>
+	</div>
+	<br class="clear_both" />
+</div>
+<% end %>
+
+
+<br />
