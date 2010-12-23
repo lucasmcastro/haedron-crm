@@ -8,6 +8,7 @@ gem 'rails', '3.0.3'
 gem 'mysql2'
 gem 'devise', '1.1.rc0'
 gem 'simple_form'
+gem 'brazilian-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
