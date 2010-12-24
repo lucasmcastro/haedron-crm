@@ -94,16 +94,17 @@ div#content h2 {
 
 p.big_text {
 	font-size: 30px;
-	color:black;
+	color: black;
 	margin: 10px 0;
 }
 
 div.main_box {
-	float:left;
+	float: left;
 }
 
 div.control_box {
-	float:right;
+	float: right;
+	text-align: right;
 }
 
 .clear {
@@ -123,6 +124,7 @@ div.control_box {
 
 .item_control {
 	float: right;
+	text-align: right;
 }
 
 
@@ -137,6 +139,10 @@ div.control_box {
 
 #footer a {
 	font-size: 9px;
+}
+
+#main_attribute {
+	margin: 3px 0;
 }
 
 /* error handling */

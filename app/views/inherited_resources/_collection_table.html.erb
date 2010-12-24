@@ -7,7 +7,7 @@
 	<div class="item_main">
 	    <% if r.respond_to? :main_attribute %>
 		<div id="main_attribute">
-	      <p><strong><%= r.send r.main_attribute %></strong></p>
+	      <p><strong><%= link_to r.send(r.main_attribute), r %></strong></p>
 		</div>
 		<% end %>
 
