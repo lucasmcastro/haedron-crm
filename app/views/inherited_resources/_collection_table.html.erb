@@ -1,0 +1,36 @@
+<% excluded_attributes = ['id', 'created_at', 'updated_at'] %>
+<% excluded_attributes << collection.first.main_attribute.to_s if collection.first.respond_to? :main_attribute %>
+
+<% collection.each do |r| %>
+<div class="list_item">
+
+	<div class="item_main">
+	    <% if r.respond_to? :main_attribute %>
+		<div id="main_attribute">
+	      <p><strong><%= r.send r.main_attribute %></strong></p>
+		</div>
+		<% end %>
+
+		<% if r.respond_to? :collection_attributes %>
+		  <% r.collection_attributes.each do |attr| %>
+              <p><%= r.send attr %></strong></p>
+		  <% end %>
+		<% else %>
+		  <% sample_attributes = r.attributes %>
+		  <% sample_attributes.delete "created_at" %>
+		  <% sample_attributes.delete "updated_at" %>
+		  <% sample_attributes.delete "id" %>
+		  <% sample_attributes.delete collection.first.main_attribute.to_s if collection.first.respond_to? :main_attribute %>		
+		  <% sample_attributes.size.times do %>
+	        <p> <%= sample_attributes.shift[1] %></p>
+		  <% end %>
+		<% end %>
+    </div>
+
+	<div class="item_control">
+    <p><%= link_to 'Alterar', edit_resource_url(r) %></p>
+    <p><%= link_to 'Remover', r, :confirm => 'Tem certeza?', :method => :delete %></p>
+	</div>
+	<br class="clear" />
+</div>
+<% end %>

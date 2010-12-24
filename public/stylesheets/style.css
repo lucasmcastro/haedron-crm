@@ -95,6 +95,7 @@ div#content h2 {
 p.big_text {
 	font-size: 30px;
 	color:black;
+	margin: 10px 0;
 }
 
 div.main_box {
@@ -137,7 +138,6 @@ div.control_box {
 #footer a {
 	font-size: 9px;
 }
-
 
 /* error handling */
 

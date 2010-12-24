@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<div class="main_box">
+
+    <% excluded_attributes = ['id', 'created_at', 'updated_at'] %>
+    <% excluded_attributes << resource.main_attribute.to_s if resource.respond_to? :main_attribute %>
+    <% excluded_attributes.concat resource.show_upper_attributes.collect {|x| x.to_s } if resource.respond_to? :show_upper_attributes %>
+
+
+	<div id="upper_attributes">
+    <% if resource.respond_to? :show_upper_attributes %>
+      <% resource.show_upper_attributes.each do |attr| %>
+    	  <p><%= resource.send attr %></p>
+	  <% end %>
+	<% end %>
+	</div>
+
+    <% if resource.respond_to? :main_attribute %>
+	<div id="main_attribute">
+      <p class="big_text"><%= resource.send resource.main_attribute %></p>
+	</div>
+	<% end %>
+
+	<% resource.attributes.each_pair do |attr, value| %>
+        <% next if excluded_attributes.include?(attr) %>
+        <p> <%= value %></p>
+    <% end %>
+
+    <% if resource.respond_to? :show_hintable_attributes %>
+	<div id="hintable_attributes">
+      <% resource.show_hintable_attributes.each do |attr_hint| %>
+    	  <p><%= attr_hint[1] %> <%= resource.send attr_hint[0] %>
+	  <% end %>
+	</div>
+	<% end %>
+</div>
+
+<div class="control_box">
+<p><%= link_to 'Alterar', edit_resource_url(resource) %></p>
+<p><%= link_to 'Remover', resource, :confirm => 'Tem certeza?', :method => :delete %></p>
+<p><%= link_to 'Voltar', collection_url %></p>
+</div>
+
+<br class="clear" />
