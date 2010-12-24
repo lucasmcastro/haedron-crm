@@ -4,6 +4,8 @@ class Account < ActiveRecord::Base
   
   # Validações
   validates_presence_of :display_name
+  validates_length_of :display_name, :in => 4..45, :unless => :display_name_is_blank?
+  validates_length_of :legal_name, :in => 4..60, :unless => :legal_name_is_blank?
   
   # Manager stub for future sake
   def manager
@@ -39,4 +41,14 @@ class Account < ActiveRecord::Base
   def show_upper_attributes
     [:legal_name, :legal_number]
   end  
+  
+  protected
+  
+  def legal_name_is_blank?
+    self.legal_name.blank?
+  end
+
+  def display_name_is_blank?
+    self.display_name.blank?
+  end
 end
