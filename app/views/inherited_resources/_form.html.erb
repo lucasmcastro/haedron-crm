@@ -14,12 +14,16 @@
     </div>
   <% end %>
 
-  <% resource.attributes.each_pair do |field, value| %>
-    <% next if ['id', 'created_at', 'updated_at'].include?(field) %>
 
-  <%= f.input field.to_sym, :label => false %>
+  <% if resource.respond_to? :form_attributes %>
+    <% resource.form_attributes.each do |attr| %>
+      <%= f.input attr, :label => false %>
+    <% end %>
+  <% else %>
+    <% resource.attributes.each_pair do |field, value| %>
+      <% next if ['id', 'created_at', 'updated_at'].include?(field) %>
+      <%= f.input field.to_sym, :label => false %>
+    <% end %>
   <% end %>
-
   <%= f.submit "Enviar" %>
-
 <% end %>

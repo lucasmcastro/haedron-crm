@@ -16,6 +16,10 @@ class Account < ActiveRecord::Base
   end
   
   # My own set of Inherited Resources Views rules
+  def form_attributes
+    [:display_name, :legal_name, :legal_number]  
+  end
+    
   def main_attribute
     :display_name
   end
