@@ -1,0 +1,24 @@
+pt-BR:
+  simple_form:
+    placeholders:
+      account:
+        display_name: 'Nome da Conta'
+        legal_name: 'Razão Social'
+        legal_number: 'CNPJ'
+      user:
+        email: 'E-mail'
+        password: '*******'
+    hints:
+      account:
+        legal_number: 'use somente números'
+      user:
+        remember_me: 'Lembrar Senha'
+# Active Record
+  activerecord:
+    models:
+      account: "Conta"
+    attributes:
+      account:
+        display_name: "Nome"
+        legal_number: "CNPJ"
+        legal_name: "Razão Social"
