@@ -11,11 +11,12 @@ gem 'inherited_resources', '1.1.2'
 gem 'inherited_resources_views', '0.4.1'
 
 group :test do
-  gem "rspec-rails", "~> 2.0.1"
+  gem 'rspec-rails', '~> 2.0.1'
+  gem 'webrat'
 end
 
 group :development do
-  gem "rspec-rails", "~> 2.0.1"
+  gem 'rspec-rails', '~> 2.0.1'
   gem 'unicorn'
   gem 'ruby-debug'
 end
