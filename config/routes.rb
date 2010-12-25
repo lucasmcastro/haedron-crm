@@ -1,9 +1,12 @@
 Haedron::Application.routes.draw do
+  get "home/index"
+  get "system/index"
+
   devise_for :users
 
   resources :accounts
 
-  get "home/index"
+  match 'system/' => 'system#index', :as => :system
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

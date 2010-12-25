@@ -27,10 +27,10 @@
 </div>
 <div class="clear" id="menu">
 	<ul>
-		<li <% if controller_name=='accounts'%>class="active"<% end %>><%= link_to "contas", accounts_path %></li>
+		<li <% if controller_name=='accounts'%>class="active"<% end %>><%= link_to "contas", accounts_url %></li>
 		<li<% if controller_name=='deals'%>class="active"<% end %> >contratos</li>
-		<li <% if @active=='people'%>class="active"<% end %> >pessoas</li>
-		<li <% if @active=='system'%>class="active"<% end %> >sistema</li>
+		<li <% if controller_name=='people'%>class="active"<% end %> >pessoas</li>
+		<li <% if controller_name=='system'%>class="active"<% end %> ><%= link_to "sistema", system_url %></li>
 	</ul>
 </div>
 	</div>
