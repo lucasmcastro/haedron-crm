@@ -3,6 +3,7 @@
 <div class="main_box">
 
     <% excluded_attributes = ['id', 'created_at', 'updated_at'] %>
+    <% excluded_attributes += resource.excluded_attributes if resource.respond_to? :excluded_attributes %>
     <% excluded_attributes << resource.main_attribute.to_s if resource.respond_to? :main_attribute %>
     <% excluded_attributes.concat resource.show_upper_attributes.collect {|x| x.to_s } if resource.respond_to? :show_upper_attributes %>
 

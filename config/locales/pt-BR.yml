@@ -17,6 +17,7 @@ pt-BR:
   activerecord:
     models:
       account: "Conta"
+      user: "Usuário"
     attributes:
       account:
         display_name: "Nome"

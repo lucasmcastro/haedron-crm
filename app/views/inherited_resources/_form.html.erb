@@ -4,7 +4,7 @@
       :html => { :method => (resource.new_record? ? "post" : "put") }) do |f| %>
     <% if resource.errors.any? %>
     <div id="error_explanation">
-      <p><%= pluralize(@account.errors.count, "erro") %></p>
+      <p><%= pluralize(resource.errors.count, "erro") %></p>
 
       <ul>
 	  <% resource.errors.full_messages.each do |msg| %>

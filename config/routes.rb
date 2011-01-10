@@ -5,6 +5,7 @@ Haedron::Application.routes.draw do
   devise_for :users
 
   resources :accounts
+  resources :users, :except => 'show'
 
   match 'system/' => 'system#index', :as => :system
 
