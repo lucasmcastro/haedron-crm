@@ -1,6 +1,6 @@
 == Introdução
 
-Atualizado em: 22-12-2010 por Lucas Castro
+Atualizado em: 10-01-2011 por Lucas Castro
 Versão: pré Alfa
 
 Tracker: ?
@@ -29,7 +29,11 @@ Para instalar:
 1. git clone git://github.com/lucasmcastro/haedron.git
 2. cd haedron
 3. bundle install
-4. rake db:migrate
+4. rake haedron:setup
+
+assim um usuário padrão será criado 
+Login: admin@example.com
+Senha: administrator
 
 
 == Web Servers

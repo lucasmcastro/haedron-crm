@@ -15,11 +15,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
     # add_index :users, :confirmation_token,   :unique => true
     add_index :users, :reset_password_token, :unique => true
     # add_index :users, :unlock_token,         :unique => true
-    
-    say_with_time "creating default 'admin@example.com' user with 'administrator' password..." do
-      User.create(:email => 'admin@example.com', :password => 'administrator')
-    end
-    
+        
   end
 
   def self.down
