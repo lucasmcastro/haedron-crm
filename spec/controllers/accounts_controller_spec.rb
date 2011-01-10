@@ -15,5 +15,8 @@ describe AccountsController, "creating a new account" do
   it "should pass params to menu item" do
     post 'create', :account => { :display_name => 'Example' }
     assigns[:account].display_name.should == 'Example'
-  end  
+  end
+  
+  
+    
 end

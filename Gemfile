@@ -12,6 +12,7 @@ gem 'inherited_resources_views', '0.4.1'
 
 group :test do
   gem 'rspec-rails', '~> 2.1.0'
+  gem 'autotest-rails', '4.1.0'
   gem 'webrat', '0.7.2'
   gem 'mocha', '0.9.10'
   gem 'blueprints', '0.8.2'

@@ -5,7 +5,7 @@ class Account < ActiveRecord::Base
   # Validações
   validates_presence_of :display_name
   validates_length_of :display_name, :in => 4..45, :unless => :display_name_is_blank?
-  validates_length_of :legal_name, :in => 4..60, :unless => :legal_name_is_blank?
+  validates_length_of :legal_name, :in => 4..60
   
   # Manager stub for future sake
   def manager
